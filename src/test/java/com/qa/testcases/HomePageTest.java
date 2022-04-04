@@ -26,7 +26,7 @@ public class HomePageTest extends TestBase {
             initialisation();
             homePage = new HomePage();
     }
-    @Test(priority = 1)
+    @Test(priority = -1)
     public void loginPageTitleTest() {
     String title = homePage.validatePageTitle();
     Assert.assertEquals(title,"My Store");
@@ -36,7 +36,7 @@ public class HomePageTest extends TestBase {
        boolean flag = homePage.validatePageImage();
         Assert.assertTrue(flag);
     }
-    @Test(priority = 3)
+    @Test(priority = -3)
     public void clickTest() {
        loginPage = homePage.clickInToLoginBtn();
     }
